@@ -1,6 +1,5 @@
-import Popular from '../components/Pupolar'
+import Popular from '../components/Papular'
 import Wajes from '../components/Wajes'
-
 function Home() {
   return (
     <div>
