@@ -16,17 +16,16 @@ function Cuisine() {
     useEffect(() =>{
         getCuisine('Italian')
     },[params.type])
-  return (
-    <Grid>
-        {cuisine.map((item) =>
-        return(
+    return (
+        <Grid>
+          {cuisine.map((item) => (
             <Card key={item.id}>
-                <img src={item.image} alt={item.title} />
-                <h4>{item.title}</h4>
+              <img src={item.image} alt={item.title} />
+              <h4>{item.title}</h4>
             </Card>
-        ))}
-    </Grid>
-  )
+          ))}
+        </Grid>
+      );
 }
 
 const Grid = styled.div`
