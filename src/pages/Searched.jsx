@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { Styled } from 'styled-components';
+import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 
 function Searched() {

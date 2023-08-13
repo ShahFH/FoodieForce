@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import { Styled, styled } from 'styled-components'
+import { styled } from 'styled-components'
 import { useParams } from 'react-router-dom'
 
 
@@ -10,7 +10,6 @@ function Recipee() {
   const [actveTab, setAcitveTab] = useState("Instructions");
 
   const fetchDetails = async () => {
-    let params = useParams();
     const data = await fetch(`https://api.spoonacular.com/recipes/${params.name}information?apiKey=${process.env.REACT_APP_API_KEY}`);
     const detailData = await data.json();
     setDetails(detailData);
@@ -25,7 +24,7 @@ function Recipee() {
     <DetailWrapper>
       <div>
         <h2>{details.title}</h2>
-        <img src={details.image} alt={} />
+        <img src={details.image} alt={details.title} />
       </div>
       <Info >
         <Button className={actveTab === 'Instructions' ? 'active' : ''} onClick={() => setAcitveTab("Instructions")}>Instructions</Button>
