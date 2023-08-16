@@ -17,7 +17,7 @@ function Recipee() {
 
   useEffect(() => {
     fetchDetails();
-  },[])
+  },[]);
 
 
   return (
